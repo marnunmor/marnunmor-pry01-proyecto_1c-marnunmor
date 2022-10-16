@@ -1,4 +1,4 @@
-# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  \<XX\>/\<YY\>)
+# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  \<22\>/\<26\>)
 Autor/a: \<Marcos Núñez Morales\>   uvus:\<XJR2031\>
 
 El dataset son casos confirmados de covid recolectados por el govierno de Mexico, provienen de la siguient fuente: SINAVE/DGE/InDRE.
