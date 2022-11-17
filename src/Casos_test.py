@@ -19,9 +19,9 @@ def test_lee_confirmados (nombre_fichero):
     @param nombre_fichero: Nombre y ruta del fichero a leer
     @type nombre_fichero: str
     '''
-    Confirmados = lee_confirmados(nombre_fichero)
-    print(f"Se han leido {len(Confirmados)} casos covid y son:")
-    mostrar_iterable(Confirmados)
+    confirmados = lee_confirmados(nombre_fichero)
+    print(f"Se han leido {len(confirmados)} casos covid y son:")
+    mostrar_iterable(confirmados)
 
 if __name__=="__main__":
     test_lee_confirmados("./data/confirmados-2020-03-21.csv")
