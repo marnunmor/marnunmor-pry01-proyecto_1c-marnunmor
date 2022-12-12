@@ -246,7 +246,7 @@ Numero de Caso,Estado,Sexo,Edad,Fecha del Inicio de los sintomas,Identificacion 
 245,COAHUILA,M,29,17/03/2020,confirmado,Estados Unidos,15/03/2020,149.92,NO
 246,CIUDAD DE MEXICO,M,25,13/03/2020,confirmado,Contacto,NA,115.95,NO
 247,CIUDAD DE MEXICO,M,37,16/03/2020,confirmado,España,16/03/2020,59.02,SI
-248,YUCATÓN,F,40,15/03/2020,confirmado,Contacto,NA,41.2,SI
+248,YUCATÓN,M,40,15/03/2020,confirmado,Contacto,NA,41.2,SI
 249,CIUDAD DE MEXICO,M,36,14/03/2020,confirmado,Contacto,NA,103.7,SI
 250,JALISCO,F,38,15/03/2020,confirmado,Estados Unidos,16/03/2020,108.54,NO
 251,COLIMA,F,34,12/03/2020,confirmado,Estados Unidos,11/03/2020,30.56,NO

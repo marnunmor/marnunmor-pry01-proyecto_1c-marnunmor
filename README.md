@@ -39,7 +39,7 @@ El dataset está compuesto por **10** columnas, con la siguiente descripción:
 
 ## Tipos implementados
 
-La namedtuple implementada esta definida en el modulo "Casos" definida por el nombre "Confirmado",contiene todos los nombres de cada columa y les asigna sus valores, en pantalla muestra "Caso_covid=" y los datos correspondientes
+La namedtuple implementada esta definida en el modulo "Casos" definida por el nombre "Infor",contiene todos los nombres de cada columa y les asigna sus valores, en pantalla muestra "Info=" y los datos correspondientes
 
 ## Funciones implementadas
 La funcion pricipal encargada de leer el dataset se encuentra en el modulo "Casos", las funciones del modulo "parser" solo se encargan de definir variables del formato bool y datetime, las funciones del modulo "Casos_test" se encargan de hacer uso de las funciones del modulo principal y mostrarlas por pantalla.
@@ -57,9 +57,25 @@ La funcion pricipal encargada de leer el dataset se encuentra en el modulo "Caso
 * **ordena_por_horas**: Esta función crea una lista de tuplas con todos los casos covid de un determinado estado, devuelve la lista ordenada de menor a mayor en función del numero de horas ingresado en e hospital.
 
 * **agrupar_por_estado**: Esta función crea un diccionario vacio al cual va añadiendo todos los estados que hay en el dataset y devuelve el diccionario con los estados una vez y a cada uno le añade las horas ingresadas del primer caso del estado correspondiente.
+
+* **total_horas_en_el_hospital_de_los_estados_segun_genero**: Esta función devuelve un diccionario siendo las claves los estados, y los valores la cantitad de horas que han estado ingresados los casos covid del genero indicado con anterioridad
+
+* **maximo_genero_repetido_en_un_estado**: Esta función devuelve un diccionario de un estado determinado, el diccionario muestra el genero mas repetido en los casos del estado correspondiente y la cantidad de veces que se repite, si no se especifica devuelve los casos del estado de Ciudad de Mexico
+
+* **maxima_edad_por_genero_estado**: Esta función devuelve un diccionario de un estado determinado,siempre devuelve dos diccionarios (uno para cada genero), el diccionario muestra la maxima edad de cada sexo en el estado correspondiente, si no se especifica devuelve los casos del estado de Ciudad de Mexico
+
+* **top_n_estados_por_horas_ingresado**: Esta función devuelve un diccionario con los estados como claves, y una cantidad "n" de horas ingresado de los casos covid del estado correspondiente como valores, la cantidad de horas ingresado son los casos con la maxima cantidad de horas, si no se especifica devuelve los 3 casos con la maxima cantidad de horas
+
+* **aux_obten_estados_cantidad_casos_por_genero**: Esta función que devuelve un diccionario de un genero determinado, esta función es una auxiliar para poder obtener las graficas devuelve un diccionario de los estados y la cantidad de casos covid  que hay en dicho estado segun el genero determinado
+
+* **grafica_estados_mas_frecuentes_por_genero**: Esta función dibuja una grafica de barras basandose en la función auxiliar,la grafica muestra los estados y muestra la cantidad de casos del genero especificado como los valores de las barras
+
+
 ### \Casos_test\
 
 * **mostrar_iterable**: Muestra por consola los elemtos de cada iterable en distintas filas
+* **mostrar_diccionario**: Muestrapor consola los elementos de un diccionario, muestra las claves y sus valores 
+
 * **test_lee_confirmados**: Hace una llamada de la funcion principal e imripime por pantalla la cantidad de casos que ha leido y las tuplas correspondientes a cada caso
 
 * **test_filtra_por_estado**: Hace llamada a la funcion **filtra_por_estado** y muestra en pantalla la lista de tuplas del estado determinado
@@ -72,6 +88,17 @@ La funcion pricipal encargada de leer el dataset se encuentra en el modulo "Caso
 
 * **test_agrupa_por_estado**: Hace llamada a la función **agrupa_por_estado** y muestra por pantalla un diccionario con cada uno de los estados y cada uno con las horas correspondientes de su primer caso covid del dataset
 
+* **test_total_horas_en_el_hospital_de_los_estados_segun_genero**: Hacella llamada a la función **total_horas_en_el_hospital_de_los_estados_segun_genero** y muestra por pantalla el diccionario que tiene como claves los estados y valores el total de horas ingresados del genero determinado
+
+* **test_maximo_genero_repetido_en_un_estado**: Hace llamada a la función **maximo_genero_repetido_en_un_estado** prueba la función y lo muestra por pantalla el diccionario el genero mas repetido el estado correspondiente y su cantidad de veces repetido
+
+* **test_maxima_edad_por_genero_estado**: Hace llamada a la función **maxima_edad_por_genero_estado**  y muestra por pantalla el diccionario que enseña los generos y la edad maxima del caso covid de dicho genero en un estado determinado
+
+* **test_top_n_estados_por_horas_ingresado**: Hace llamada a la función **top_n_estados_por_horas_ingresado** y muestra un diccionario con los estados como claves y la cantidad n de horas ingresados que son las horas maximas de los n casos covid del estado determinado
+
+* **test_aux_obten_estados_cantidad_casos_por_genero**: Hace llamada a la función **aux_obten_estados_cantidad_casos_por_genero** y muestra por pantalla la cantidad de casos de un genero determinado que tiene cada estado, de normal esta comentada ya que es una función auxiliar pero podria probarse
+
+* **test_grafica_estados_mas_frecuentes_por_genero**: Hace llamada a la función **grafica_estados_mas_frecuentes_por_genero** y muestra las graficas del genero determinado enseñando los estados y la cantidad de casos que han habido en cada estado del genero correspondiente
 ### \parsers\
 
 * **parse_bool**: En el dataset solo se puede encontar el valor "Si" o "No", esta funcion le asigna el valor "True" al "Si" y el "False" al "No" 
